@@ -14,12 +14,12 @@
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
       Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
     text-align: center;
-    overflow: hidden;
+    overflow: hidden; /* 防止滚动条 */
   }
   body {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start; /* 顶部对齐，靠近上方 */
     align-items: center;
     min-height: 100vh;
   }
@@ -27,14 +27,14 @@
     font-size: 1.6rem;
     line-height: 1.5;
     max-width: 320px;
-    margin-top: 10vh;
+    margin-top: 13vh; /* 折中向下偏移 */
     margin-bottom: 0;
   }
   @media (min-width: 400px) {
     .main-text {
       font-size: 2rem;
       max-width: 400px;
-      margin-top: 15vh;
+      margin-top: 17vh;
     }
   }
 </style>
