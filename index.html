@@ -5,6 +5,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>HEXFAST - 快如闪电 稳定加速</title>
 
+        <!-- Favicon -->
+        <link rel="icon" type="image/svg+xml" href="images/hexfast-logo-black.svg">
+        <link rel="alternate icon" href="favicon.ico">
+
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=inter:400,500,600,700" rel="stylesheet" />
@@ -48,7 +52,7 @@
                     max-width: 1280px;
                     width: 100%;
                     margin: 0 auto;
-                    padding: 2rem 2rem 1.5rem;
+                    padding: 2rem 3.5rem 1.5rem;
                     display: flex;
                     flex-direction: column;
                     gap: 2rem;
@@ -125,18 +129,15 @@
 
                 .app-main {
                     display: grid;
-                    grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
-                    gap: 4rem;
+                    grid-template-columns: 556fr 270fr;
+                    gap: 3rem;
                     align-items: center;
-                    position: relative;
-                    flex: 1;
-                    justify-content: center;
                 }
 
                 .app-main section {
                     display: flex;
                     flex-direction: column;
-                    align-items: flex-start;
+                    align-items: center;
                     justify-content: center;
                     width: 100%;
                 }
@@ -152,18 +153,13 @@
                 .hero-title {
                     font-size: 2.5rem;
                     line-height: 1.2;
-                    margin-bottom: 3.5rem;
+                    margin-bottom: 2.5rem;
                     font-weight: 700;
                     letter-spacing: -0.01em;
-                    /* 渐变文字效果 */
                     background: linear-gradient(135deg, #ffffff 0%, #c3d3ff 50%, #8fb3ff 100%);
                     -webkit-background-clip: text;
                     background-clip: text;
                     -webkit-text-fill-color: transparent;
-                }
-
-                .hero-title span {
-                    color: #c3d3ff;
                 }
 
                 .hero-subtitle {
@@ -171,15 +167,12 @@
                     color: rgba(255, 255, 255, 0.9);
                     max-width: 32rem;
                     line-height: 1.6;
-                    margin-bottom: 0;
                 }
 
                 .hero-actions {
                     display: grid;
                     grid-template-columns: repeat(2, 1fr);
                     gap: 1rem;
-                    margin-top: 0;
-                    margin-bottom: 0;
                     max-width: 500px;
                     width: 100%;
                 }
@@ -211,18 +204,7 @@
                     background: rgba(255, 255, 255, 0.12);
                 }
 
-                .hero-actions .secondary {
-                    padding: 0.9rem 1.4rem;
-                    border-radius: 999px;
-                    border: 1px solid rgba(255, 255, 255, 0.7);
-                    background: transparent;
-                    color: #ffffff;
-                    font-size: 0.9rem;
-                    cursor: pointer;
-                }
-
                 .hero-footnote {
-                    margin-top: 0;
                     font-size: 0.85rem;
                     color: rgba(255, 255, 255, 0.7);
                     letter-spacing: 0.03em;
@@ -230,17 +212,19 @@
                     width: 100%;
                 }
 
+                /* 地球动画容器 - 基础样式 */
                 .earth-lottie {
+                    overflow: hidden;
+                    position: relative;
                     display: flex;
                     align-items: center;
                     justify-content: center;
                 }
 
-                .earth-lottie #earth-animation {
-                    width: 480px;
-                    height: 480px;
-                    max-width: 100%;
-                    opacity: 1;
+                .earth-lottie #earth-animation,
+                .earth-lottie svg {
+                    width: 100%;
+                    height: 100%;
                 }
 
                 /* Footer 样式 */
@@ -250,7 +234,7 @@
                     width: 100%;
                     max-width: 1280px;
                     margin: 0 auto;
-                    padding: 2.5rem 2rem 2rem;
+                    padding: 2.5rem 0 2rem 2rem;
                     border-top: 1px solid rgba(255, 255, 255, 0.1);
                     margin-top: 3rem;
                 }
@@ -260,6 +244,10 @@
                     grid-template-columns: repeat(3, 1fr);
                     gap: 3rem;
                     margin-bottom: 2rem;
+                }
+
+                .footer-section {
+                    text-align: left;
                 }
 
                 .footer-section h3 {
@@ -280,13 +268,11 @@
                 }
 
                 .footer-section:nth-child(3) ul {
-                    display: flex;
-                    flex-wrap: wrap;
-                    gap: 1rem;
+                    display: block;
                 }
 
                 .footer-section:nth-child(3) ul li {
-                    margin-bottom: 0;
+                    margin-bottom: 0.5rem;
                 }
 
                 .footer-section a {
@@ -318,45 +304,86 @@
                     font-size: 0.8rem;
                 }
 
-                @media (max-width: 900px) {
+                /* 横屏布局 - 所有设备横屏时使用桌面布局 */
+                @media (orientation: landscape) {
                     .app-main {
-                        grid-template-columns: minmax(0, 1fr);
-                        gap: 2rem;
+                        display: grid;
+                        grid-template-columns: 556fr 270fr;
+                        gap: 3rem;
+                        align-items: center;
+                        justify-items: center;
                     }
 
                     .app-main section {
-                        position: relative;
-                        z-index: 1;
-                        order: 2;
+                        order: 1;
+                        text-align: center;
                     }
 
                     .app-main aside {
+                        order: 2;
+                    }
+
+                    .hero-actions {
+                        margin-left: auto;
+                        margin-right: auto;
+                    }
+
+                    .earth-lottie {
+                        width: 270px;
+                        height: 270px;
+                    }
+
+                    /* 大屏幕横屏时保持一致的 padding */
+                    @media (min-width: 1025px) {
+                        .app-shell {
+                            padding-left: 3.5rem;
+                            padding-right: 3.5rem;
+                        }
+
+                        .app-footer {
+                            padding-left: 2rem;
+                            padding-right: 0;
+                        }
+                    }
+
+                    /* 中等屏幕横屏 */
+                    @media (max-width: 1024px) {
+                        .app-shell {
+                            padding-left: 3rem;
+                            padding-right: 3rem;
+                        }
+
+                        .app-main {
+                            gap: 3rem;
+                        }
+                    }
+                }
+
+                /* 竖屏布局 - 所有设备竖屏时使用移动端布局 */
+                @media (orientation: portrait) {
+                    .app-main {
+                        grid-template-columns: minmax(0, 1fr);
+                        gap: 2rem;
+                        justify-items: center;
+                    }
+
+                    .app-main section {
+                        order: 2;
                         position: relative;
+                        z-index: 1;
+                    }
+
+                    .app-main aside {
                         order: 1;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
                         width: 100%;
                     }
 
                     .earth-lottie {
-                        opacity: 1;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        margin-top: -1.5rem;
-                        margin-bottom: -1.5rem;
-                    }
-
-                    .earth-lottie #earth-animation {
-                        width: 450px;
-                        height: 450px;
-                    }
-
-                    .phone-card {
-                        margin: 0 auto;
-                    }
-
-                    .app-shell {
-                        padding: 1.5rem 1.5rem 1rem;
-                        gap: 1.5rem;
+                        width: 253px;
+                        height: 253px;
                     }
 
                     .hero-actions {
@@ -364,7 +391,13 @@
                     }
                 }
 
-                @media (max-width: 640px) {
+                /* 小屏幕竖屏的额外样式调整 */
+                @media (orientation: portrait) and (max-width: 640px) {
+                    .app-shell {
+                        padding: 1.5rem 1.5rem 1rem;
+                        gap: 1.5rem;
+                    }
+
                     .app-main section {
                         text-align: center;
                         padding: 1.5rem 1.25rem;
@@ -424,21 +457,14 @@
                     }
 
                     .hero-footnote {
-                        margin-top: 0;
                         font-size: 0.8rem;
                         text-align: center;
-                        padding: 0;
                         width: 100%;
                     }
 
                     .earth-lottie {
-                        margin-top: -2rem;
-                        margin-bottom: -2rem;
-                    }
-
-                    .earth-lottie #earth-animation {
-                        width: 350px;
-                        height: 350px;
+                        width: 197px;
+                        height: 197px;
                     }
 
                     .app-footer {
@@ -640,12 +666,20 @@
                 // 右侧地球：使用本地 Lottie 动画
                 const earthContainer = document.getElementById('earth-animation');
                 if (earthContainer && window.lottie) {
-                    window.lottie.loadAnimation({
+                    const animation = window.lottie.loadAnimation({
                         container: earthContainer,
                         renderer: 'svg',
                         loop: true,
                         autoplay: true,
                         path: 'turn-earth.json', // 相对路径
+                    });
+                    
+                    // 设置 SVG 的 preserveAspectRatio 实现 cover 裁切
+                    animation.addEventListener('DOMLoaded', function() {
+                        const svg = earthContainer.querySelector('svg');
+                        if (svg) {
+                            svg.setAttribute('preserveAspectRatio', 'xMidYMid slice');
+                        }
                     });
                 }
             })();
