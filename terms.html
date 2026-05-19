@@ -1,275 +1,185 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Terms of Service - HEXFAST</title>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HexFast Terms of Service</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #0b0f14;
+      --card: #111821;
+      --text: #eef4f8;
+      --muted: #a8b5c0;
+      --line: rgba(255,255,255,0.12);
+      --accent: #91f27c;
+    }
 
-        <!-- Favicon -->
-        <link rel="icon" type="image/x-icon" href="favicon.ico">
-        <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
-        <link rel="icon" type="image/svg+xml" href="images/hexfast-logo-black.svg">
-        <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top right, rgba(145,242,124,0.12), transparent 34%), var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+    }
 
-        <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=inter:400,500,600,700" rel="stylesheet" />
+    main {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 48px 20px 72px;
+    }
 
-        <style>
-            * {
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-            }
-            
-            body {
-                font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-                background: #02020a;
-                min-height: 100vh;
-                color: #f5f5f5;
-                line-height: 1.6;
-            }
+    article {
+      background: rgba(17,24,33,0.88);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 34px;
+      box-shadow: 0 24px 70px rgba(0,0,0,0.28);
+    }
 
-            #space-bg {
-                position: fixed;
-                inset: 0;
-                width: 100%;
-                height: 100%;
-                display: block;
-                z-index: -1;
-            }
+    h1, h2 {
+      line-height: 1.2;
+      margin: 0 0 14px;
+    }
 
-            .container {
-                position: relative;
-                z-index: 1;
-                max-width: 800px;
-                width: 100%;
-                margin: 0 auto;
-                padding: 2rem 3.5rem;
-            }
+    h1 {
+      font-size: clamp(32px, 6vw, 48px);
+      letter-spacing: -0.04em;
+    }
 
-            .header {
-                margin-bottom: 3rem;
-                padding-bottom: 1.5rem;
-                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            }
+    h2 {
+      font-size: 22px;
+      margin-top: 34px;
+    }
 
-            .header a {
-                color: rgba(255, 255, 255, 0.7);
-                text-decoration: none;
-                font-size: 0.9rem;
-                margin-bottom: 1rem;
-                display: inline-block;
-                transition: color 0.2s ease;
-            }
+    p, li {
+      color: var(--muted);
+      font-size: 16px;
+    }
 
-            .header a:hover {
-                color: #ffffff;
-            }
+    ul {
+      padding-left: 22px;
+    }
 
-            h1 {
-                font-size: 2.5rem;
-                font-weight: 700;
-                margin-bottom: 0.5rem;
-                background: linear-gradient(135deg, #ffffff 0%, #c3d3ff 50%, #8fb3ff 100%);
-                -webkit-background-clip: text;
-                background-clip: text;
-                -webkit-text-fill-color: transparent;
-            }
+    a {
+      color: var(--accent);
+    }
 
-            .last-updated {
-                color: rgba(255, 255, 255, 0.6);
-                font-size: 0.9rem;
-            }
+    .meta {
+      color: var(--accent);
+      font-weight: 700;
+      margin-bottom: 28px;
+    }
 
-            .content {
-                background: rgba(255, 255, 255, 0.03);
-                backdrop-filter: blur(10px);
-                border: 1px solid rgba(255, 255, 255, 0.1);
-                border-radius: 16px;
-                padding: 3rem;
-                margin-bottom: 2rem;
-            }
+    .summary {
+      font-size: 18px;
+      color: var(--text);
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <article>
+      <h1>Terms of Service</h1>
+      <p class="meta">Effective Date: May 19, 2026</p>
 
-            .content h2 {
-                font-size: 1.5rem;
-                font-weight: 600;
-                margin-top: 2.5rem;
-                margin-bottom: 1rem;
-                color: #ffffff;
-            }
+      <p class="summary">
+        These Terms of Service ("Terms") govern your access to and use of HexFast ("HexFast", "we", "us", or "our"), including the HexFast mobile application and related services.
+      </p>
 
-            .content h2:first-child {
-                margin-top: 0;
-            }
+      <h2>1. Acceptance of Terms</h2>
+      <p>
+        By downloading, accessing, or using HexFast, you agree to these Terms and our Privacy Policy. If you do not agree, do not use the app or service.
+      </p>
 
-            .content p {
-                margin-bottom: 1.25rem;
-                color: rgba(255, 255, 255, 0.9);
-            }
+      <h2>2. Service Description</h2>
+      <p>
+        HexFast is a VPN utility app that uses Apple's Network Extension framework to create a user-authorized VPN connection. The service is provided for lawful personal use and is available only where permitted by applicable law.
+      </p>
 
-            .content ul {
-                margin-left: 1.5rem;
-                margin-bottom: 1.25rem;
-            }
+      <h2>3. Eligibility and Legal Compliance</h2>
+      <p>
+        You are responsible for complying with all laws and regulations that apply to your use of HexFast, including laws in your location and any location where you use the service. You must not use HexFast where VPN services are restricted or prohibited unless you have the legal right to do so.
+      </p>
 
-            .content li {
-                margin-bottom: 0.75rem;
-                color: rgba(255, 255, 255, 0.9);
-            }
+      <h2>4. Subscriptions and Billing</h2>
+      <p>
+        HexFast offers auto-renewable subscription plans through Apple's in-app purchase system. Payment will be charged to your Apple Account at confirmation of purchase.
+      </p>
+      <p>
+        Subscriptions automatically renew unless canceled at least 24 hours before the end of the current billing period. Your Apple Account may be charged for renewal within 24 hours before the end of the current period.
+      </p>
+      <p>
+        You can manage or cancel your subscription in your Apple Account settings. We do not receive or store your full payment card details.
+      </p>
 
-            .content a {
-                color: #8fb3ff;
-                text-decoration: none;
-            }
+      <h2>5. Free Trials and Promotions</h2>
+      <p>
+        We may offer free trials, promotional pricing, or limited-time offers. Trial and promotional terms will be presented in the app or by Apple at the time of signup. Unless canceled before the trial ends, a trial may convert into a paid subscription according to the offer terms.
+      </p>
 
-            .content a:hover {
-                text-decoration: underline;
-            }
+      <h2>6. Refunds</h2>
+      <p>
+        Purchases and refunds are handled by Apple according to Apple's policies. To request a refund or report a billing issue, visit Apple's support resources or use <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>.
+      </p>
 
-            @media (max-width: 768px) {
-                .container {
-                    padding: 1.5rem 1.5rem;
-                }
+      <h2>7. Acceptable Use</h2>
+      <p>You agree not to use HexFast to:</p>
+      <ul>
+        <li>Violate any applicable law or regulation.</li>
+        <li>Infringe the rights of others.</li>
+        <li>Transmit malware, spam, or harmful content.</li>
+        <li>Attempt unauthorized access to networks, systems, or accounts.</li>
+        <li>Interfere with or disrupt the service or related infrastructure.</li>
+        <li>Abuse, resell, reverse engineer, or misuse the service.</li>
+      </ul>
 
-                h1 {
-                    font-size: 2rem;
-                }
+      <h2>8. Service Availability</h2>
+      <p>
+        HexFast is provided on an "as available" basis. We may modify, suspend, or discontinue all or part of the service at any time. Network speed, availability, and performance may vary based on location, device, network conditions, server load, and other factors outside our control.
+      </p>
 
-                .content {
-                    padding: 2rem 1.5rem;
-                }
+      <h2>9. Privacy</h2>
+      <p>
+        Our Privacy Policy explains how we handle information. By using HexFast, you agree to the practices described in the Privacy Policy.
+      </p>
 
-                .content h2 {
-                    font-size: 1.25rem;
-                }
-            }
-        </style>
-    </head>
-    <body>
-        <!-- 星空背景 -->
-        <canvas id="space-bg"></canvas>
+      <h2>10. Account and Device Access</h2>
+      <p>
+        HexFast may create an anonymous app session and device-scoped identifier to provide the service, restore subscription access, and support customer service. You are responsible for keeping your device secure.
+      </p>
 
-        <div class="container">
-            <div class="header">
-                <a href="/">← Back to Home</a>
-                <h1>Terms of Service</h1>
-                <p class="last-updated">Last updated: December 25, 2025</p>
-            </div>
+      <h2>11. Suspension or Termination</h2>
+      <p>
+        We may suspend or terminate access to HexFast if we believe you have violated these Terms, abused the service, created security risk, engaged in fraud, or used the service unlawfully.
+      </p>
 
-            <div class="content">
-                <p>By downloading or using the HEXFAST application ("the App"), you agree to these Terms of Service ("Terms").</p>
+      <h2>12. Intellectual Property</h2>
+      <p>
+        HexFast, including the app, design, branding, and related materials, is owned by us or our licensors and is protected by applicable intellectual property laws. These Terms do not grant you ownership of any HexFast intellectual property.
+      </p>
 
-                <h2>1. Service Description</h2>
-                <p>The App provides a network connectivity tool designed to help users route network traffic securely and efficiently. The App does not guarantee access to any specific content or services.</p>
+      <h2>13. Disclaimers</h2>
+      <p>
+        To the maximum extent permitted by law, HexFast is provided without warranties of any kind, whether express, implied, or statutory, including warranties of merchantability, fitness for a particular purpose, reliability, availability, and non-infringement.
+      </p>
 
-                <h2>2. Acceptable Use</h2>
-                <p>You agree not to use the App to:</p>
-                <ul>
-                    <li>Engage in illegal activities</li>
-                    <li>Violate applicable laws or regulations</li>
-                    <li>Infringe intellectual property rights</li>
-                    <li>Distribute malware or harmful content</li>
-                </ul>
-                <p>You are solely responsible for how you use the App.</p>
+      <h2>14. Limitation of Liability</h2>
+      <p>
+        To the maximum extent permitted by law, HexFast and its owners, employees, contractors, and service providers will not be liable for indirect, incidental, special, consequential, exemplary, or punitive damages, or for loss of data, profits, revenue, goodwill, or business opportunities arising from or related to your use of the service.
+      </p>
 
-                <h2>3. No Warranties</h2>
-                <p>The App is provided on an "as is" and "as available" basis. We do not guarantee uninterrupted or error-free service.</p>
+      <h2>15. Changes to These Terms</h2>
+      <p>
+        We may update these Terms from time to time. If we make material changes, we will update the effective date above and make the revised Terms available at this page. Your continued use of HexFast after changes become effective means you accept the updated Terms.
+      </p>
 
-                <h2>4. Limitation of Liability</h2>
-                <p>To the maximum extent permitted by law, we shall not be liable for any indirect, incidental, or consequential damages arising from the use of the App.</p>
-
-                <h2>5. Subscription and Billing</h2>
-                <p>Subscriptions are managed through Apple's In-App Purchase system. Refunds and billing issues are handled according to Apple's policies.</p>
-
-                <h2>6. Termination</h2>
-                <p>We reserve the right to suspend or terminate access to the App if these Terms are violated.</p>
-
-                <h2>7. Changes to Terms</h2>
-                <p>We may modify these Terms at any time. Continued use of the App constitutes acceptance of the updated Terms.</p>
-
-                <h2>8. Contact</h2>
-                <p>Email: <a href="mailto:support@hexfast.com">support@hexfast.com</a></p>
-            </div>
-        </div>
-
-        <script>
-            (function () {
-                const canvas = document.getElementById('space-bg');
-                if (!canvas) return;
-                const ctx = canvas.getContext('2d');
-
-                let width = window.innerWidth;
-                let height = window.innerHeight;
-                canvas.width = width;
-                canvas.height = height;
-
-                window.addEventListener('resize', () => {
-                    width = window.innerWidth;
-                    height = window.innerHeight;
-                    canvas.width = width;
-                    canvas.height = height;
-                });
-
-                const STAR_COUNT = 150;
-                const stars = [];
-                const seed = Math.random() * 10000;
-
-                for (let i = 0; i < STAR_COUNT; i++) {
-                    const base = seed + i * 137.5;
-                    const x = (Math.sin(base) * 0.5 + 0.5) * width;
-                    const y = (Math.cos(base * 1.3) * 0.5 + 0.5) * height;
-                    const brightness = Math.sin(base * 2.7) * 0.5 + 0.5;
-                    const size = (Math.sin(base * 3.1) * 0.5 + 0.5) * 2 + 0.5;
-                    stars.push({ x, y, brightness, size });
-                }
-
-                let startTime = performance.now();
-
-                function drawFrame(now) {
-                    const t = (now - startTime) / 1000;
-                    const phase = t * 0.25;
-                    const topColor = {
-                        r: 2 + 10 * Math.sin(phase),
-                        g: 4 + 15 * Math.sin(phase + Math.PI / 3),
-                        b: 20 + 40 * Math.sin(phase + (2 * Math.PI) / 3),
-                    };
-                    const midColor = {
-                        r: 1 + 8 * Math.sin(phase + Math.PI / 4),
-                        g: 2 + 10 * Math.sin(phase + Math.PI / 2),
-                        b: 15 + 30 * Math.sin(phase + (3 * Math.PI) / 4),
-                    };
-
-                    const gradient = ctx.createLinearGradient(0, 0, 0, height);
-                    gradient.addColorStop(0, `rgb(${topColor.r}, ${topColor.g}, ${Math.max(25, topColor.b)})`);
-                    gradient.addColorStop(0.5, `rgb(${midColor.r}, ${midColor.g}, ${Math.max(30, midColor.b)})`);
-                    gradient.addColorStop(1, 'rgb(0, 0, 0)');
-
-                    ctx.fillStyle = gradient;
-                    ctx.fillRect(0, 0, width, height);
-
-                    for (const star of stars) {
-                        const opacity = star.brightness * 0.9;
-                        ctx.beginPath();
-                        ctx.arc(star.x, star.y, star.size / 2, 0, Math.PI * 2);
-                        ctx.fillStyle = `rgba(255, 255, 255, ${opacity})`;
-                        ctx.fill();
-
-                        if (star.size > 1.5) {
-                            ctx.beginPath();
-                            ctx.arc(star.x, star.y, star.size * 1.4, 0, Math.PI * 2);
-                            ctx.fillStyle = `rgba(120, 220, 255, ${opacity * 0.3})`;
-                            ctx.fill();
-                        }
-                    }
-
-                    requestAnimationFrame(drawFrame);
-                }
-
-                requestAnimationFrame(drawFrame);
-            })();
-        </script>
-    </body>
+      <h2>16. Contact Us</h2>
+      <p>
+        If you have questions about these Terms, contact us at:
+        <a href="mailto:support@hexfast.com">support@hexfast.com</a>
+      </p>
+    </article>
+  </main>
+</body>
 </html>
-
