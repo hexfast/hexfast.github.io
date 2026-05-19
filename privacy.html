@@ -1,180 +1,297 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>HexFast Privacy Policy</title>
-  <style>
-    :root {
-      color-scheme: light dark;
-      --bg: #0b0f14;
-      --card: #111821;
-      --text: #eef4f8;
-      --muted: #a8b5c0;
-      --line: rgba(255,255,255,0.12);
-      --accent: #91f27c;
-    }
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Privacy Policy - HEXFAST</title>
 
-    body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: radial-gradient(circle at top left, rgba(145,242,124,0.12), transparent 34%), var(--bg);
-      color: var(--text);
-      line-height: 1.65;
-    }
+        <!-- Favicon -->
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+        <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+        <link rel="icon" type="image/svg+xml" href="images/hexfast-logo-black.svg">
+        <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
 
-    main {
-      max-width: 860px;
-      margin: 0 auto;
-      padding: 48px 20px 72px;
-    }
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.bunny.net">
+        <link href="https://fonts.bunny.net/css?family=inter:400,500,600,700" rel="stylesheet" />
 
-    article {
-      background: rgba(17,24,33,0.88);
-      border: 1px solid var(--line);
-      border-radius: 22px;
-      padding: 34px;
-      box-shadow: 0 24px 70px rgba(0,0,0,0.28);
-    }
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
 
-    h1, h2 {
-      line-height: 1.2;
-      margin: 0 0 14px;
-    }
+            body {
+                font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+                background: #02020a;
+                min-height: 100vh;
+                color: #f5f5f5;
+                line-height: 1.6;
+            }
 
-    h1 {
-      font-size: clamp(32px, 6vw, 48px);
-      letter-spacing: -0.04em;
-    }
+            #space-bg {
+                position: fixed;
+                inset: 0;
+                width: 100%;
+                height: 100%;
+                display: block;
+                z-index: -1;
+            }
 
-    h2 {
-      font-size: 22px;
-      margin-top: 34px;
-    }
+            .container {
+                position: relative;
+                z-index: 1;
+                max-width: 800px;
+                width: 100%;
+                margin: 0 auto;
+                padding: 2rem 3.5rem;
+            }
 
-    p, li {
-      color: var(--muted);
-      font-size: 16px;
-    }
+            .header {
+                margin-bottom: 3rem;
+                padding-bottom: 1.5rem;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            }
 
-    ul {
-      padding-left: 22px;
-    }
+            .header a {
+                color: rgba(255, 255, 255, 0.7);
+                text-decoration: none;
+                font-size: 0.9rem;
+                margin-bottom: 1rem;
+                display: inline-block;
+                transition: color 0.2s ease;
+            }
 
-    a {
-      color: var(--accent);
-    }
+            .header a:hover {
+                color: #ffffff;
+            }
 
-    .meta {
-      color: var(--accent);
-      font-weight: 700;
-      margin-bottom: 28px;
-    }
+            h1 {
+                font-size: 2.5rem;
+                font-weight: 700;
+                margin-bottom: 0.5rem;
+                background: linear-gradient(135deg, #ffffff 0%, #c3d3ff 50%, #8fb3ff 100%);
+                -webkit-background-clip: text;
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
 
-    .summary {
-      font-size: 18px;
-      color: var(--text);
-    }
-  </style>
-</head>
-<body>
-  <main>
-    <article>
-      <h1>Privacy Policy</h1>
-      <p class="meta">Effective Date: May 19, 2026</p>
+            .last-updated {
+                color: rgba(255, 255, 255, 0.6);
+                font-size: 0.9rem;
+            }
 
-      <p class="summary">
-        This Privacy Policy explains how HexFast ("HexFast", "we", "us", or "our") handles information when you use the HexFast mobile application and related services.
-      </p>
+            .content {
+                background: rgba(255, 255, 255, 0.03);
+                backdrop-filter: blur(10px);
+                border: 1px solid rgba(255, 255, 255, 0.1);
+                border-radius: 16px;
+                padding: 3rem;
+                margin-bottom: 2rem;
+            }
 
-      <h2>1. VPN Traffic Data</h2>
-      <p>
-        HexFast does not sell, use, or disclose VPN traffic data, browsing history, DNS query contents, or network activity to third parties for any purpose.
-      </p>
-      <p>
-        HexFast does not use VPN traffic data for advertising, user profiling, or tracking users across apps or websites.
-      </p>
+            .content h2 {
+                font-size: 1.5rem;
+                font-weight: 600;
+                margin-top: 2.5rem;
+                margin-bottom: 1rem;
+                color: #ffffff;
+            }
 
-      <h2>2. Information We Process to Provide the Service</h2>
-      <p>
-        The app may create a device-scoped anonymous identifier. We use this identifier to maintain the app session, restore subscription access, prevent duplicate device records, and help customer support identify a device when you provide the displayed Device number.
-      </p>
-      <p>
-        We process Apple in-app purchase transaction information, such as product ID, transaction ID, original transaction ID, subscription status, expiration date, and related StoreKit subscription data. This information is used only to validate purchases, restore purchases, and provide subscription access.
-      </p>
-      <p>
-        We may process limited operational logs, such as request time, API endpoint, response status, IP address, and user agent, for security, abuse prevention, troubleshooting, and service reliability.
-      </p>
+            .content h2:first-child {
+                margin-top: 0;
+            }
 
-      <h2>3. Information We Do Not Collect</h2>
-      <p>
-        HexFast does not require you to create a username or password to use the app. We do not intentionally collect your name, phone number, mailing address, contacts, photos, precise location, browsing history, search history, or the content of your communications.
-      </p>
+            .content p {
+                margin-bottom: 1.25rem;
+                color: rgba(255, 255, 255, 0.9);
+            }
 
-      <h2>4. How We Use Information</h2>
-      <p>We use the information described above to:</p>
-      <ul>
-        <li>Provide and maintain the VPN service.</li>
-        <li>Create and maintain your anonymous app session.</li>
-        <li>Validate subscription purchases and restore purchases across devices.</li>
-        <li>Synchronize subscription access with our servers.</li>
-        <li>Provide customer support when you contact us.</li>
-        <li>Monitor service reliability, troubleshoot errors, and prevent abuse or fraud.</li>
-        <li>Comply with legal obligations and enforce our Terms of Service.</li>
-      </ul>
+            .content ul {
+                margin-left: 1.5rem;
+                margin-bottom: 1.25rem;
+            }
 
-      <h2>5. Payments and Subscriptions</h2>
-      <p>
-        Subscriptions are processed by Apple through Apple's in-app purchase system. We do not receive or store your full payment card details. Apple may provide transaction identifiers and subscription status information that we use to validate subscription access.
-      </p>
+            .content li {
+                margin-bottom: 0.75rem;
+                color: rgba(255, 255, 255, 0.9);
+            }
 
-      <h2>6. Sharing of Information</h2>
-      <p>
-        We do not sell personal information. We do not share VPN traffic data, browsing history, DNS query contents, or network activity with third parties.
-      </p>
-      <p>
-        We may use service providers for hosting, database storage, monitoring, and subscription status processing. These providers may process limited operational information only as needed to operate and secure the service.
-      </p>
+            .content a {
+                color: #8fb3ff;
+                text-decoration: none;
+            }
 
-      <h2>7. Data Retention</h2>
-      <p>
-        We retain anonymous account, device, and subscription records for as long as reasonably necessary to provide the service, restore purchases, prevent abuse, comply with legal obligations, resolve disputes, and enforce our agreements.
-      </p>
-      <p>
-        Operational logs are retained only as long as reasonably necessary for security, troubleshooting, and reliability.
-      </p>
+            .content a:hover {
+                text-decoration: underline;
+            }
 
-      <h2>8. Security</h2>
-      <p>
-        We use reasonable administrative, technical, and organizational safeguards designed to protect information. However, no method of transmission or storage is completely secure, and we cannot guarantee absolute security.
-      </p>
+            @media (max-width: 768px) {
+                .container {
+                    padding: 1.5rem 1.5rem;
+                }
 
-      <h2>9. Children's Privacy</h2>
-      <p>
-        HexFast is not intended for children under 13. We do not knowingly collect personal information from children under 13.
-      </p>
+                h1 {
+                    font-size: 2rem;
+                }
 
-      <h2>10. Your Choices</h2>
-      <p>
-        You can manage or cancel your subscription in your Apple Account settings. You can also contact us for support regarding your app account or device record.
-      </p>
+                .content {
+                    padding: 2rem 1.5rem;
+                }
 
-      <h2>11. International Use</h2>
-      <p>
-        Your information may be processed on servers located in countries or regions other than where you live. By using HexFast, you understand that information may be processed in those locations.
-      </p>
+                .content h2 {
+                    font-size: 1.25rem;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Starfield background -->
+        <canvas id="space-bg"></canvas>
 
-      <h2>12. Changes to This Policy</h2>
-      <p>
-        We may update this Privacy Policy from time to time. If we make material changes, we will update the effective date above and make the revised policy available at this page.
-      </p>
+        <div class="container">
+            <div class="header">
+                <a href="/">← Back to Home</a>
+                <h1>Privacy Policy</h1>
+                <p class="last-updated">Last updated: May 19, 2026</p>
+            </div>
 
-      <h2>13. Contact Us</h2>
-      <p>
-        If you have questions about this Privacy Policy or HexFast's privacy practices, contact us at:
-        <a href="mailto:support@hexfast.com">support@hexfast.com</a>
-      </p>
-    </article>
-  </main>
-</body>
+            <div class="content">
+                <p>HEXFAST ("we", "our", or "us") respects your privacy. This Privacy Policy explains how the HEXFAST application ("the App") and related services handle information.</p>
+
+                <h2>1. VPN Traffic Data</h2>
+                <p>HEXFAST does not sell, use, or disclose VPN traffic data, browsing history, DNS query contents, or network activity to third parties for any purpose.</p>
+                <p>HEXFAST does not use VPN traffic data for advertising, user profiling, or tracking users across apps or websites.</p>
+
+                <h2>2. Information We Process to Provide the Service</h2>
+                <p>The App may create a device-scoped anonymous identifier. We use this identifier to maintain the app session, restore subscription access, prevent duplicate device records, and help customer support identify a device when you provide the displayed Device number.</p>
+                <p>We process Apple in-app purchase transaction information, such as product ID, transaction ID, original transaction ID, subscription status, expiration date, and related StoreKit subscription data. This information is used only to validate purchases, restore purchases, and provide subscription access.</p>
+                <p>We may process limited operational logs, such as request time, API endpoint, response status, IP address, and user agent, for security, abuse prevention, troubleshooting, and service reliability.</p>
+
+                <h2>3. Information We Do Not Intentionally Collect</h2>
+                <p>The App does not require a separate username or password. We do not intentionally collect your name, phone number, mailing address, contacts, photos, precise location, browsing history, search history, or the content of your communications.</p>
+
+                <h2>4. How We Use Information</h2>
+                <p>We use the information described above to:</p>
+                <ul>
+                    <li>Provide and maintain the VPN service.</li>
+                    <li>Create and maintain your anonymous app session.</li>
+                    <li>Validate subscription purchases and restore purchases across devices.</li>
+                    <li>Synchronize subscription access with our servers.</li>
+                    <li>Provide customer support when you contact us.</li>
+                    <li>Monitor service reliability, troubleshoot errors, and prevent abuse or fraud.</li>
+                    <li>Comply with legal obligations and enforce our Terms of Service.</li>
+                </ul>
+
+                <h2>5. Payments and Subscriptions</h2>
+                <p>Payments and subscriptions are handled through Apple's In-App Purchase system. We do not receive or store your full payment card details. Apple may provide transaction identifiers and subscription status information that we use to validate subscription access.</p>
+
+                <h2>6. Sharing of Information</h2>
+                <p>We do not sell personal information. We do not share VPN traffic data, browsing history, DNS query contents, or network activity with third parties.</p>
+                <p>We may use service providers for hosting, database storage, monitoring, and subscription status processing. These providers may process limited operational information only as needed to operate and secure the service.</p>
+
+                <h2>7. Data Retention</h2>
+                <p>We retain anonymous account, device, and subscription records for as long as reasonably necessary to provide the service, restore purchases, prevent abuse, comply with legal obligations, resolve disputes, and enforce our agreements.</p>
+                <p>Operational logs are retained only as long as reasonably necessary for security, troubleshooting, and reliability.</p>
+
+                <h2>8. Security</h2>
+                <p>We use reasonable administrative, technical, and organizational safeguards designed to protect information. However, no method of transmission or storage is completely secure, and we cannot guarantee absolute security.</p>
+
+                <h2>9. Children's Privacy</h2>
+                <p>The App is not directed to children under the age of 13, and we do not knowingly collect personal information from children.</p>
+
+                <h2>10. Your Choices</h2>
+                <p>You can manage or cancel your subscription in your Apple Account settings. You can also contact us for support regarding your app account or device record.</p>
+
+                <h2>11. International Use</h2>
+                <p>Your information may be processed on servers located in countries or regions other than where you live. By using HEXFAST, you understand that information may be processed in those locations.</p>
+
+                <h2>12. Changes to This Policy</h2>
+                <p>We may update this Privacy Policy from time to time. Any changes will be reflected by updating the "Last updated" date above.</p>
+
+                <h2>13. Contact</h2>
+                <p>If you have questions about this Privacy Policy, you may contact us at:</p>
+                <p>Email: <a href="mailto:support@hexfast.com">support@hexfast.com</a></p>
+            </div>
+        </div>
+
+        <script>
+            (function () {
+                const canvas = document.getElementById('space-bg');
+                if (!canvas) return;
+                const ctx = canvas.getContext('2d');
+
+                let width = window.innerWidth;
+                let height = window.innerHeight;
+                canvas.width = width;
+                canvas.height = height;
+
+                window.addEventListener('resize', () => {
+                    width = window.innerWidth;
+                    height = window.innerHeight;
+                    canvas.width = width;
+                    canvas.height = height;
+                });
+
+                const STAR_COUNT = 150;
+                const stars = [];
+                const seed = Math.random() * 10000;
+
+                for (let i = 0; i < STAR_COUNT; i++) {
+                    const base = seed + i * 137.5;
+                    const x = (Math.sin(base) * 0.5 + 0.5) * width;
+                    const y = (Math.cos(base * 1.3) * 0.5 + 0.5) * height;
+                    const brightness = Math.sin(base * 2.7) * 0.5 + 0.5;
+                    const size = (Math.sin(base * 3.1) * 0.5 + 0.5) * 2 + 0.5;
+                    stars.push({ x, y, brightness, size });
+                }
+
+                let startTime = performance.now();
+
+                function drawFrame(now) {
+                    const t = (now - startTime) / 1000;
+                    const phase = t * 0.25;
+                    const topColor = {
+                        r: 2 + 10 * Math.sin(phase),
+                        g: 4 + 15 * Math.sin(phase + Math.PI / 3),
+                        b: 20 + 40 * Math.sin(phase + (2 * Math.PI) / 3),
+                    };
+                    const midColor = {
+                        r: 1 + 8 * Math.sin(phase + Math.PI / 4),
+                        g: 2 + 10 * Math.sin(phase + Math.PI / 2),
+                        b: 15 + 30 * Math.sin(phase + (3 * Math.PI) / 4),
+                    };
+
+                    const gradient = ctx.createLinearGradient(0, 0, 0, height);
+                    gradient.addColorStop(0, `rgb(${topColor.r}, ${topColor.g}, ${Math.max(25, topColor.b)})`);
+                    gradient.addColorStop(0.5, `rgb(${midColor.r}, ${midColor.g}, ${Math.max(30, midColor.b)})`);
+                    gradient.addColorStop(1, 'rgb(0, 0, 0)');
+
+                    ctx.fillStyle = gradient;
+                    ctx.fillRect(0, 0, width, height);
+
+                    for (const star of stars) {
+                        const opacity = star.brightness * 0.9;
+                        ctx.beginPath();
+                        ctx.arc(star.x, star.y, star.size / 2, 0, Math.PI * 2);
+                        ctx.fillStyle = `rgba(255, 255, 255, ${opacity})`;
+                        ctx.fill();
+
+                        if (star.size > 1.5) {
+                            ctx.beginPath();
+                            ctx.arc(star.x, star.y, star.size * 1.4, 0, Math.PI * 2);
+                            ctx.fillStyle = `rgba(120, 220, 255, ${opacity * 0.3})`;
+                            ctx.fill();
+                        }
+                    }
+
+                    requestAnimationFrame(drawFrame);
+                }
+
+                requestAnimationFrame(drawFrame);
+            })();
+        </script>
+    </body>
 </html>
